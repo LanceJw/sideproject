@@ -1,0 +1,346 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* CSS for automatic slider */
+
+.slider {
+    width: 100%;
+    height: 630px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.slides {
+    width: 600%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 630px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    top: 92%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #40D3Dc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s; 
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #40D3Dc;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+#radio6:checked ~ .first {
+    margin-left: -100%;
+}
+
+
+/* CSS for automatic navigation */
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 92%;
+    margin-top: -40px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #40D3DC;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+    background: #40D3DC;
+}
+
+
+
+
+.content_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.custom_section {
+    width: 100%;
+}
+
+.custom_section span {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.custom_section img {
+    width: 100%;
+}
+
+.custom_section p {
+    font-size: 15px;
+}
+
+.custom_section div {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 1.4rem 0rem 0rem;
+}
+
+.custom_section a {
+    text-decoration: none;
+    color: white;
+}
+
+.custom_section i {
+    padding-right: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .modal_container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(34, 34, 34);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#modal_btn {
+    color: white;
+    text-align: right;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.input_section {
+    width: 45%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input_section form {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 131px;
+}
+
+.input_section form input {
+    border: none;
+    outline: none;
+    background-color: #3b3b3bbf;
+    height: 40px;
+    border-radius: 5px;
+    color: rgb(180, 180, 180);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+::placeholder {
+    color: rgb(180, 180, 180);
+    font-size: 15px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+
+
+
+.ticketSelectorContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticketSelector {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.ticket_counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.4rem;
+}
+
+.ticketClicker {
+    padding: 6px;
+    border-radius: 2px;
+    background-color: orange;
+}
+
+#adult_counter {
+    font-size: 18px;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+#children_counter {
+    font-size: 18px;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.calculatorContainer {
+    width: 50%;
+    height: 50vh;
+    background-color: #3b3b3bbf;
+    border-radius: 10px;
+}
+
+.calculatorHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding-left: 10px;
+    margin-top: 0.6rem;
+}
+
+.ticketSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    height: 20px;
+}
+
+.totalPrice_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 20px;
+    align-items: center;
+    margin-top: 60%;
+    padding-top: 5%;
+    border-top: 2px solid black;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  } */

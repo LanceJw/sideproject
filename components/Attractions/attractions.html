@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="attractions.css"/>
+    <link rel="stylesheet" href="../../index.css"/>
+    <script src="https://kit.fontawesome.com/7fc7895a6d.js" crossorigin="anonymous"></script>
+    <title>Kim Possible | Attractions</title>
+</head>
+<body>
+    <div class="modal_container" id="modalContainer">
+        <p id="modal_btn"><i class="fa-solid fa-xmark"></i></p>
+
+        <!-- Input Content -->
+        <div class="content_container">
+            <div class="input_section">
+                <form action="">
+                    <input type="text" placeholder="Name" required>
+                    <input type="" placeholder="Phone Number" required>
+                    <input type="date" required>
+                </form>
+
+
+                <div class="ticketSelectorContainer">
+                    <p>Number of Tickets</p>
+                    <div class="ticketSelector">
+                        <div class="counterContainer">
+                            <p>Adult</p>
+                            <div class="ticket_counter">
+                                <i class="fa-solid fa-angle-left ticketClicker" onclick="minusAdultHandler()"></i>
+                                <p id="adult_counter"></p>
+                                <i class="fa-solid fa-angle-right ticketClicker" onclick="plusAdultHandler()"></i>
+                            </div>
+                        </div>
+
+                        <div class="counterContainer">
+                            <p>Children</p>
+                            <div class="ticket_counter">
+                                <i class="fa-solid fa-angle-left ticketClicker" onclick="minusChildHandler()"></i>
+                                <p id="children_counter"></p>
+                                <i class="fa-solid fa-angle-right ticketClicker" onclick="plusChildHandler()"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px;">No extra charges for Weekends or Public Holidays</p>
+                </div>
+
+            </div>
+
+            <!-- Calculator -->
+
+            <div class="calculatorContainer">
+                <p style="text-align: center; margin-top: 0.4rem;">Price</p>
+
+                <!-- Header -->
+                <div class="calculatorHeader">
+                    <p>Ticket Type :</p>
+                    <p>Quantity :</p>
+                    <p>Price :</p>
+                </div>
+                <!-- Adult section -->
+                <div class="ticketSection">
+                    <p id="adultType"></p>
+                    <p id="adultTix_num"></p>
+                    <p id="adultTix_price"></p>
+                </div>
+
+                <!-- Children ticket price section -->
+                <div class="ticketSection">
+                    <p id="childType"></p>
+                    <p id="childTix_num"></p>
+                    <p id="childTix_price"></p>
+                </div>
+
+                <!-- Total price section -->
+                <div class="totalPrice_section">
+                    <p style="padding-left: 22px;">Grand Total :</p>
+                    <p id="tixTotalPrice"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="navbar_container">
+            <div class="navbar">
+                <!-- Logo -->
+                <a href='/'><img class="logo" src="../../assets/main_logo.png" alt="Logo" /></a>
+
+
+                <!-- Navbar links -->
+                <div class="navbar_links">
+                    <a href="../../index.html">Home</a>
+                    <a href="../Attractions/attractions.html">Attractions</a>
+                    <a href="../ContactUs/contactUs.html">Contact Us</a>
+                    <span id="bookNow_btn">Book Now</span>
+                </div>
+            </div>
+
+
+            <!-- Mobile Menu -->
+            <div class="mobile_navbar">
+                <!-- Logo -->
+                <a href='/'><img class="mobile_logo" src="../../assets/main_logo.png" alt="Logo" /></a>
+
+                <!-- Hamburger Menu Icon -->
+                <i class="fa-solid fa-bars" id="navbarIcon" onclick="toggleNavbar()"></i>
+            </div>
+
+            <div id="mobile_navbarMenu">
+                <i class="fa-solid fa-xmark" onclick="toggleNavbar()"></i>
+
+                <!-- Links -->
+                <div class="navbar_links">
+                    <a href="../../index.html">Home</a>
+                    <a href="../Attractions/attractions.html">Attractions</a>
+                    <a href="../ContactUs/contactUs.html">Contact Us</a>
+                </div>
+
+                <!-- Social media -->
+                <div class="social_media">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+
+                <div class="slide first">
+                    <img src="../../assets/attraction1.png" alt="" /> 
+                </div>
+                <div class="slide">
+                    <img src="../../assets/attraction3.jpg" alt="" /> 
+                </div>
+                <div class="slide">
+                    <img src="../../assets/attraction4.jpg" alt="" /> 
+                </div>
+                <div class="slide">
+                    <img src="../../assets/attraction5.jpg" alt="" /> 
+                </div>
+                <div class="slide">
+                    <img src="../../assets/attraction6.jpg" alt="" /> 
+                </div>
+                <div class="slide">
+                    <img src="../../assets/attraction7.jpg" alt="" /> 
+                </div>
+
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                </div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3"  class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6"  class="manual-btn"></label>
+            </div>
+        </div>
+
+
+        <!-- Attractions content Section -->
+        <div>
+            <p class="header">Attractions</p>
+
+
+            <div class="content_container">
+                <!-- Individual rides section -->
+                <div class="custom_section">
+                    <span>Doggy Coaster</span>
+                    <img src="../../assets/attraction1.png" alt="Attraction_Image" class="attractions_Image"/>
+                    <p>Take a ride if you dare on this coaster. Although it looks innocent enough, the screams from the top of the ride say otherwise! Eliciting screams from the passengers as 
+                        the coaster seems to go off the track before whipping rapidly around. Sudden drops and bunny hops add to the thrills--it'll make you want to "Blast Off!”</p>
+                </div>
+
+                <div class="custom_section">
+                    <span>Swing Ride</span>
+                    <img src="../../assets/attraction3.jpg" alt="Attraction_Image" class="attractions_Image"/>
+                    <p>Strap yourself in and experience the thrill of flying! Lay on your stomach and take off into the wild blue yonder as you are lifted high in the air and tilted forward 
+                        giving way to the exhilarating sensation of free flight.</p>
+                </div>
+
+                <div class="custom_section">
+                    <span>Wild Wild Slide</span>
+                    <img src="../../assets/attraction4.jpg" alt="Attraction_Image" class="attractions_Image"/>
+                    <p>Brave the rapids and you're rewarded with a thrilling good time! Step into the raft with your friends and family and set off down the river, spinning and turning through 
+                        rapids, water falls and even a whirlpool!</p>
+                </div>
+                <div class="custom_section">
+                    <span>Water Rafting</span>
+                    <img src="../../assets/attraction5.jpg" alt="Attraction_Image" class="attractions_Image"/>
+                    <p>Take a trip down the Splasher for a splashin' good time filled with twists and turns. Don’t forget to hold on tightly to your seat! Sure to provide thrills for family 
+                        and friends.</p>
+                </div>
+
+                <div class="custom_section">
+                    <span>Playground</span>
+                    <img src="../../assets/attraction6.jpg" alt="Attraction_Image" class="attractions_Image"/>
+                    <p>Are your kids bored? Fret not! Let them have a whale of a time at this never ending playground.</p>
+                </div>
+
+                <div class="custom_section">
+                    <span>Underwater World</span>
+                    <img src="../../assets/attraction7.jpg" alt="Attraction_Image" class="attractions_Image"/>
+                    <p>Hungry after spending a good deal of time at Kim Impossible? Don’t worry! Set foot into our restro bar and savour our yummy delicious food with a wide range of choices!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div class="footer_description">
+            <img src="../../assets/main_logo.png" alt="Footer Logo" />
+            <span>Largest Attraction Park in my dream</span>
+        </div>
+
+        <div class="footer_contactinfo">
+            <span>Contact Info</span>
+        </div>
+
+        <span>All rights reserved &copy; 2023 | Designed by Lance</span>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

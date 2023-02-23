@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7fc7895a6d.js" crossorigin="anonymous"></script>
+    <title>Kim Possible | Home</title>
+</head>
+
+</div>
+
+<body id="body">
+
+    <div id="container">
+
+        <!-- Modal Container for the Book Now portion -->
+
+        <div class="modal_container" id="modalContainer">
+            <p id="modal_btn"><i class="fa-solid fa-xmark"></i></p>
+
+            <!-- Input Content -->
+            <div class="content_container">
+                <div class="input_section">
+                    <form action="">
+                        <input type="text" placeholder="Name" required>
+                        <input type="" placeholder="Phone Number" required>
+                        <input type="date" required>
+                    </form>
+
+
+                    <div class="ticketSelectorContainer">
+                        <p>Number of Tickets</p>
+                        <div class="ticketSelector">
+                            <div class="counterContainer">
+                                <p>Adult</p>
+                                <div class="ticket_counter">
+                                    <i class="fa-solid fa-angle-left ticketClicker" onclick="minusAdultHandler()"></i>
+                                    <p id="adult_counter"></p>
+                                    <i class="fa-solid fa-angle-right ticketClicker" onclick="plusAdultHandler()"></i>
+                                </div>
+                            </div>
+
+                            <div class="counterContainer">
+                                <p>Children</p>
+                                <div class="ticket_counter">
+                                    <i class="fa-solid fa-angle-left ticketClicker" onclick="minusChildHandler()"></i>
+                                    <p id="children_counter"></p>
+                                    <i class="fa-solid fa-angle-right ticketClicker" onclick="plusChildHandler()"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-size: 14px;">No extra charges for Weekends or Public Holidays</p>
+                    </div>
+
+                </div>
+
+                <!-- Calculator -->
+
+                <div class="calculatorContainer">
+                    <p style="text-align: center; margin-top: 0.4rem;">Price</p>
+
+                    <!-- Header -->
+                    <div class="calculatorHeader">
+                        <p>Ticket Type :</p>
+                        <p>Quantity :</p>
+                        <p>Price :</p>
+                    </div>
+                    <!-- Adult section -->
+                    <div class="ticketSection">
+                        <p id="adultType"></p>
+                        <p id="adultTix_num"></p>
+                        <p id="adultTix_price"></p>
+                    </div>
+
+                    <!-- Children ticket price section -->
+                    <div class="ticketSection">
+                        <p id="childType"></p>
+                        <p id="childTix_num"></p>
+                        <p id="childTix_price"></p>
+                    </div>
+
+                    <!-- Total price section -->
+                    <div class="totalPrice_section">
+                        <p style="padding-left: 22px;">Grand Total :</p>
+                        <p id="tixTotalPrice"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Navigation Bar -->
+
+        <div class="navbar_container">
+            <div class="navbar">
+                <!-- Logo -->
+                <a href='/'><img class="logo" src="assets/main_logo.png" alt="Logo" /></a>
+
+
+                <!-- Navbar links -->
+                <div class="navbar_links">
+                    <a href="index.html">Home</a>
+                    <a href="components/Attractions/attractions.html">Attractions</a>
+                    <a href="components/ContactUs/contactUs.html">Contact Us</a>
+                    <span id="bookNow_btn">Book Now</span>
+                </div>
+            </div>
+
+
+            <!-- Mobile Menu -->
+            <div class="mobile_navbar">
+                <!-- Logo -->
+                <a href='/'><img class="mobile_logo" src="assets/main_logo.png" alt="Logo" /></a>
+
+                <!-- Hamburger Menu Icon -->
+                <i class="fa-solid fa-bars" id="navbarIcon" onclick="toggleNavbar()"></i>
+            </div>
+
+            <div id="mobile_navbarMenu">
+                <i class="fa-solid fa-xmark" onclick="toggleNavbar()"></i>
+
+                <!-- Links -->
+                <div class="navbar_links">
+                    <a href="index.html">Home</a>
+                    <a href="components/Attractions/attractions.html">Attractions</a>
+                    <a href="components/ContactUs/contactUs.html">Contact Us</a>
+                </div>
+
+                <!-- Social media -->
+                <div class="social_media">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="bgImage_container">
+            <img id="main_bgImage" src="assets/front_page.jpg" alt="Theme Park" />
+            <img id="bgImage_logo" src="assets/fp_logo.png" alt="BG Image Logo" />
+        </div>
+
+
+        <div style="margin-bottom: 5rem;">
+            <p class="header">Featured Rides</p>
+
+            <!-- Popular rides section -->
+            <div class="content_container_row">
+                <div class="section">
+                    <span>Doggy Coaster</span>
+                    <img src="./assets/attraction1.png" />
+                    <p>Take a ride if you dare on this coaster. Although it looks innocent
+                        enough, the screams from the top of the ride say otherwise! Eliciting screams from the
+                        passengers as the coaster seems to go off the track before whipping rapidly around. Sudden drops
+                        and bunny hops add to the thrills--it'll make you want to "Blast Off!”
+                    </p>
+                    <div>
+                        <a href="components/Attractions/attractions.html">Read More</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <span>Swing Ride</span>
+                    <img src="./assets/attraction3.jpg" />
+                    <p>Strap yourself in and experience the thrill of flying! Lay on your
+                        stomach and take off into the wild blue yonder as you are lifted high in the air and tilted
+                        forward giving way to the exhilarating sensation of free flight.
+                    </p>
+                    <div>
+                        <a href="components/Attractions/attractions.html">Read More</a>
+                        <i class="fa-solid fa-angle-right icon"></i>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <span>Water Rafting</span>
+                    <img src="./assets/attraction4.jpg" />
+                    <p>Take a trip down the Splasher for a splashin' good time filled with
+                        twists and turns. Don't forget to hold on tightly to your seat! Sure to provide thrills for
+                        family and friends.
+                    </p>
+                    <div>
+                        <a href="components/Attractions/attractions.html">Read More</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is the FAQ section -->
+
+        <div>
+            <p class="header" style="margin-bottom: 1.5rem;">FAQs</p>
+
+            <div class="FAQ">
+                <div class="question_div" id="questionSelector1">
+                    <p class="question" style="padding-left: 10px;">Am I able to refund my ticket or change the date for
+                        entry?</p>
+                    <i class="fa-solid fa-angle-down" style="padding-right: 10px;"></i>
+                </div>
+
+                <div class="answer_div" id="answerDiv1">
+                    <p>Yes. For all enquires regarding refund services or changes to the original date of entry, please
+                        call 65401200 or head down to the Kim Impossible branch located at 461 Clementi Rd.</p>
+                </div>
+            </div>
+
+            <div class="FAQ">
+                <div class="question_div" id="questionSelector2">
+                    <p class="question" style="padding-left: 10px;">Am I allowed to bring pets into the park?</p>
+                    <i class="fa-solid fa-angle-down" style="padding-right: 10px;"></i>
+                </div>
+
+                <div class="answer_div" id="answerDiv2">
+                    <p>You are allowed to bring your pets at your own risk! We are not responsible for the safety of
+                        your pets:)</p>
+                </div>
+            </div>
+
+            <div class="FAQ">
+                <div class="question_div" id="questionSelector3">
+                    <p class="question" style="padding-left: 10px;">What is the operating hours?</p>
+                    <i class="fa-solid fa-angle-down" style="padding-right: 10px;"></i>
+                </div>
+
+                <div class="answer_div" id="answerDiv3">
+                    <p>Mon -Thurs : 11am to 7pm && Fri- Sun :10am to 8pm </p>
+                </div>
+            </div>
+
+            <div class="FAQ">
+                <div class="question_div" id="questionSelector4">
+                    <p class="question" style="padding-left: 10px;">Is there a specific dress code to enter the park?
+                    </p>
+                    <i class="fa-solid fa-angle-down" style="padding-right: 10px;"></i>
+                </div>
+
+                <div class="answer_div" id="answerDiv4">
+                    <p>No, there is no specific dress code for entry. Do dress comfortably!</p>
+                </div>
+            </div>
+
+
+            <div class="FAQ" id="showMore_content">
+                <div class="question_div" id="questionSelector5">
+                    <p class="question" style="padding-left: 10px;">Am I allowed to bring pets into the park?</p>
+                    <i class="fa-solid fa-angle-down" style="padding-right: 10px;"></i>
+                </div>
+
+                <div class="answer_div" id="answerDiv5">
+                    <p>No, there is no specific dress code for entry. Do dress comfortably!</p>
+                </div>
+            </div>
+            <p id="FAQ_showMoreBtn">Show More</p>
+        </div>
+
+
+        <div id="footer">
+            <div class="footer_description">
+                <img src="assets/main_logo.png" alt="Footer Logo" />
+                <span>Largest Attraction Park in my dream</span>
+            </div>
+
+            <div class="footer_contactinfo">
+                <span>Contact Info</span>
+            </div>
+
+            <span>All rights reserved &copy; 2023 | Designed by Lance</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
